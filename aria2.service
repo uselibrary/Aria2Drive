@@ -1,0 +1,16 @@
+[Unit]
+Description=Aria2c download manager
+Requires=network.target
+After=dhcpcd.service
+     
+[Service]
+Type=forking
+User=root
+RemainAfterExit=yes
+ExecStart=/usr/bin/aria2c --conf-path=/etc/aria2/aria2.conf --daemon
+ExecReload=/usr/bin/kill -HUP $MAINPID
+RestartSec=1min
+Restart=on-failure
+     
+[Install]
+WantedBy=multi-user.target
