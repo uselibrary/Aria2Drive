@@ -45,7 +45,7 @@ else
   fi
 fi
 
-#update system and needed software
+#update system and install needed software
 apt update -y && apt upgrade -y
 apt install vim git curl wget unzip -y
 apt install nginx -y
@@ -55,7 +55,7 @@ apt install php-fpm php-curl -y
 rm /var/www/html/index.nginx-debian.html
 rm /etc/nginx/sites-available/default
 rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/
+cd /etc/nginx/sites-available
 wget --no-check-certificate -O domain https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/domain
 read -p "please input yourdomain: " yourdomain
 sed "s/server_name _;/server_name ${yourdomain};/g" domain -i
@@ -64,9 +64,10 @@ ln -s /etc/nginx/sites-available/${yourdomain} /etc/nginx/sites-enabled/
 systemctl reload nginx
 
 #install oneindex
-cd /home/
+cd /home
 git clone https://github.com/donwa/oneindex.git
 mv oneindex/* /var/www/html/
+cd /var/www/html
 rm README.md
 chmod -R +777 cache config
 
@@ -88,7 +89,7 @@ unzip -d /var/www/html/AriaNG/ AriaNg.zip
 rm /var/www/html/AriaNG/LICENSE
 wget --no-check-certificate -O autoupload.sh https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/autoupload.sh
 chmod +777 /home/autoupload.sh
-cd /lib/systemd/system/
+cd /lib/systemd/system
 wget --no-check-certificate -O aria2.service https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/aria2.service
 systemctl enable aria2
 systemctl start aria2
@@ -105,3 +106,4 @@ read -p "please input remote drive name again: " drivename
 sed "s/OD/${drivename}/g" autoupload.sh -i
 
 echo "FINISHED"
+echo "it is recommended to reboot!"
