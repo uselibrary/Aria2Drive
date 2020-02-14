@@ -8,7 +8,7 @@ Aria2Drive为一键脚本，将会为你打造一个利用aria2和onedrive实现
 
 地址为<https://github.com/uselibrary/Aria2Drive>
 
-一键脚本如下，推荐边运行脚本边看下面的教程：
+一键脚本如下，推荐边运行脚本边看教程，<https://pa.ci/95.html>
 
 wget --no-check-certificate -O Aria2Drive.sh <https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/Aria2Drive.sh> && chmod +x Aria2Drive.sh && bash Aria2Drive.sh
 
