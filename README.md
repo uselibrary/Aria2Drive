@@ -14,6 +14,8 @@ It is better to read <https://pa.ci/95.html> first.
 
 
 
+## 中文说明
+
 Aria2Drive为一键脚本，将会为你打造一个利用aria2和onedrive实现离线下载功能的私有网盘，只支持Debian 9（主要是因为没时间去适配其他系统，我主用Debian系），考虑到稳定性问题，推荐使用纯净系统进行运行和安装。
 
 一键脚本如下，推荐先读完教程再执行，教程地址：<https://pa.ci/95.html>
