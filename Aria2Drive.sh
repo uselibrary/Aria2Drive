@@ -70,6 +70,7 @@ mv oneindex/* /var/www/html/
 cd /var/www/html
 rm README.md
 chmod -R +777 cache config
+echo -ne '\n*/10 * * * * php /var/www/html/one.php cache:refresh' >>/etc/crontab
 
 #install aria2 and AriaNG
 apt install aria2 -y
