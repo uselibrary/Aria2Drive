@@ -82,7 +82,7 @@ wget --no-check-certificate -O aria2.conf https://raw.githubusercontent.com/usel
 sed "s/dl.pa.ci/${yourdomain}/g" aria2.conf -i
 read -p "please input aria2 password: " aria2password
 sed "s/hostlocmjj/${aria2password}/g" aria2.conf -i
-touch /var/www/html/AriaNG
+mkdir /var/www/html/AriaNG
 cd /home
 NGver=$(wget --no-check-certificate -qO- https://api.github.com/repos/mayswind/AriaNg/releases/latest | grep 'tag_name' | cut -d\" -f4)
 wget --no-check-certificate -O AriaNg.zip https://github.com/mayswind/AriaNg/releases/download/${NGver}/AriaNg-${NGver}.zip
@@ -103,6 +103,7 @@ certbot --nginx
 #install rclone
 cd /home
 curl https://rclone.org/install.sh | bash
+rclone config
 read -p "please input remote drive name again: " drivename
 sed "s/OD/${drivename}/g" autoupload.sh -i
 
