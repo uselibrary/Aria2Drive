@@ -15,7 +15,7 @@ else
     dirnameStr=`dirname "$filePath"`
     if [ "$dirnameStr" = "$downloadPath" ]; then
       basenameStr=`basename "$filePath"`
-      su - -c "rclone move \"$filePath\" $rcloneDrive:\"$basenameStr\""
+      su - -c "rclone move \"$filePath\" $rcloneDrive\"$basenameStr\""
       rm -r -f "$filePath"
       exit 0
     elif [ "$dirnameStr" = "/" ]; then
