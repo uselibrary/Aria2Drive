@@ -98,7 +98,10 @@ systemctl start aria2
 
 #install ssl
 cd /home
-apt install certbot python-certbot-nginx -y
+apt install snapd
+snap install core
+snap install --classic certbot
+ln -s /snap/bin/certbot /usr/bin/certbot
 certbot --nginx
 
 #install rclone

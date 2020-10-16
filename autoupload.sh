@@ -1,13 +1,13 @@
 #!/bin/bash
 
-rcloneDrive='OD'
+rcloneDrive='OD:/download'
 downloadPath='/home/download'
 
 if [ $2 -eq 0 ]; then
   exit 0
 elif [ $2 -eq 1 ]; then
   basenameStr=`basename "$3"`
-  su - -c "rclone move \"$3\" $rcloneDrive:"
+  su - -c "rclone move \"$3\" $rcloneDrive"
   exit 0
 else
   filePath=$3
