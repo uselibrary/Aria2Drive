@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rcloneDrive='OD:/download'
+rcloneDrive='OD:/download/'
 downloadPath='/home/download'
 
 if [ $2 -eq 0 ]; then

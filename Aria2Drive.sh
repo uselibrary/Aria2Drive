@@ -5,7 +5,7 @@ echo "    ################################################"
 echo "    #                                              #"
 echo "    #                   Aria2Drive                 #"
 echo "    #                  https://pa.ci               #"
-echo "    #                   Version 0.1                #"
+echo "    #                  Version 0.1.1               #"
 echo "    ################################################"
 
 #check system pure debian 9
