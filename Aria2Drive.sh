@@ -8,10 +8,10 @@ echo "    #                  https://pa.ci               #"
 echo "    #                  Version 0.1.1               #"
 echo "    ################################################"
 
-#check system pure debian 9
+#check system pure debian
 echo -e ""
 if cat /etc/*-release | grep -Eqi "debian"; then
-  echo "Debian 9"
+  echo "Debian"
 else
   echo "Only Debain is supported"
   echo "***EXIT***"
