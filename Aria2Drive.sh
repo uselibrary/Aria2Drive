@@ -66,7 +66,7 @@ systemctl reload nginx
 #install oneindex
 cd /home
 git clone https://github.com/ikym/Oneindex.git
-mv oneindex/* /var/www/html/
+mv Oneindex/* /var/www/html/
 cd /var/www/html
 wget --no-check-certificate -O robots.txt https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/robots.txt
 rm README.md
