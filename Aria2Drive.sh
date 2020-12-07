@@ -109,7 +109,7 @@ cd /home
 curl https://rclone.org/install.sh | bash
 rclone config
 read -p "please input remote drive name again: " drivename
-sed "s/OD/${drivename}/g" autoupload.sh
+sed "s/OD/${drivename}/g" autoupload.sh -i
 
 echo "FINISHED"
 echo "it is recommended to reboot!"
