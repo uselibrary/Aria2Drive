@@ -1,17 +1,18 @@
 #!/bin/bash
 
+#for ubuntu
 clear
 echo "    ################################################"
 echo "    #                                              #"
 echo "    #                   Aria2Drive                 #"
 echo "    #                  https://pa.ci               #"
-echo "    #                  Version 0.1.1               #"
+echo "    #                  Version 0.2.0               #"
 echo "    ################################################"
 
 #check system pure debian
 echo -e ""
-if cat /etc/*-release | grep -Eqi "debian"; then
-  echo "Debian"
+if cat /etc/*-release | grep -Eqi "ubuntu"; then
+  echo "ubuntu"
 else
   echo "Only Debain is supported"
   echo "***EXIT***"
@@ -105,7 +106,6 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 certbot --nginx
 
 #install rclone
-#apt install rclone is coming to have better performance
 cd /home
 curl https://rclone.org/install.sh | bash
 rclone config
