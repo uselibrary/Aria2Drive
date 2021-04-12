@@ -11,8 +11,8 @@ echo "    ################################################"
 
 #check system pure debian
 echo -e ""
-if cat /etc/*-release | grep -Eqi "ubuntu"; then
-  echo "ubuntu"
+if cat /etc/*-release | grep -Eqi "centos"; then
+  echo "centos"
 else
   echo "the system is not supported"
   echo "***EXIT***"
@@ -21,7 +21,7 @@ else
 fi
 if dpkg -l | grep -Eqi "nginx|apache|caddy"; then
   echo "System is modified"
-  echo "Pure Debain is needed"
+  echo "Pure CentOS is needed"
   echo "***EXIT***"
   sleep 1
   exit
@@ -47,10 +47,10 @@ else
 fi
 
 #update system and install needed software
-apt update -y && apt upgrade -y
-apt install vim git curl wget unzip -y
-apt install nginx -y
-apt install php-fpm php-curl -y
+yum update -y
+yum install vim git curl wget unzip -y
+yum install nginx -y
+yum install php-fpm php-curl -y
 
 #set up nginx
 rm /var/www/html/index.nginx-debian.html
@@ -75,7 +75,7 @@ chmod -R +777 cache config
 echo -ne '\n*/10 * * * * php /var/www/html/one.php cache:refresh' >>/etc/crontab
 
 #install aria2 and AriaNG
-apt install aria2 -y
+yum install aria2 -y
 mkdir /etc/aria2
 mkdir /home/download
 cd /etc/aria2
@@ -99,7 +99,7 @@ systemctl start aria2
 
 #install ssl
 cd /home
-apt install snapd
+yum install snapd
 snap install core
 snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
