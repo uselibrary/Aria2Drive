@@ -29,3 +29,5 @@ wget --no-check-certificate -O Aria2Drive.sh <https://raw.githubusercontent.com/
 - 基础性软件：vim git curl wget unzip
 - 维持性软件：nginx php-fpm php-curl
 - 功能性软件：aria2 AriaNG Oneindex rclone
+
+Ubuntu and CentOS version scripts are avalible which need to manual run.
