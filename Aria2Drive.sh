@@ -61,7 +61,7 @@ read -p "please input yourdomain: " yourdomain
 sed "s/server_name _;/server_name ${yourdomain};/g" domain -i
 mv domain ${yourdomain}
 ln -s /etc/nginx/sites-available/${yourdomain} /etc/nginx/sites-enabled/
-systemctl reload nginx
+systemctl restart nginx
 
 #install oneindex
 cd /home
