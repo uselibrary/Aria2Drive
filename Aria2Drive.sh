@@ -70,7 +70,7 @@ mv Oneindex/* /var/www/html/
 cd /var/www/html
 wget --no-check-certificate -O robots.txt https://raw.githubusercontent.com/uselibrary/Aria2Drive/master/robots.txt
 rm README.md
-chmod -R +777 cache config
+chmod -R +666 cache config
 echo -ne '\n*/10 * * * * php /var/www/html/one.php cache:refresh' >>/etc/crontab
 
 #install aria2 and AriaNG
