@@ -19,8 +19,8 @@ else
   exit
 fi
 if dpkg -l | grep -Eqi "nginx|apache|caddy"; then
-  echo "System is modified"
-  echo "Pure Debain or ubuntu is needed"
+  echo "System has been modified"
+  echo "Pure Debain or ubuntu is needed!"
   echo "***EXIT***"
   sleep 1
   exit
