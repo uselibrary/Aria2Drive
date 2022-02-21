@@ -12,6 +12,9 @@ To use this script, you need OneDrive account and a server/VPS which runs Debian
 
 It is better to read <https://pa.ci/95.html> first.
 
+[Update] Feb 21, 2022
+Add telegram bot notice function after the data upload completed. This feature is not enabled by default, please modify the last three lines of the `autoupload.sh` if needed: remove the `#` and input your telegram bot TOKEN and CHAT ID. This feature is `curl` dependent, please make sure curl is installed.
+
 
 
 ## 中文说明
@@ -31,3 +34,7 @@ wget --no-check-certificate -O Aria2Drive.sh <https://raw.githubusercontent.com/
 - 功能性软件：aria2 AriaNG Oneindex rclone
 
 Ubuntu and CentOS version scripts are avalible which need to manual run.
+
+
+[更新] 2022年2月21日
+新增了电报提醒功能，在文件完成上传之后，会通过电报机器人推送消息。此功能默认关闭，如果有需要，请修改`autoupload.sh`的最后三行：删除`#`，并填写你的电报机器人的TOEKN和CHAT ID。此功能依赖于`curl`，启用前请确保已经安装了。

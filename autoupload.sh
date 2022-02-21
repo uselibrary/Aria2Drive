@@ -25,3 +25,8 @@ else
     fi
   done
 fi
+
+# API_KEY=""
+# CHAT_ID=""
+# curl -s -o /dev/null "https://api.telegram.org/bot$API_KEY/sendMessage?chat_id=$CHAT_ID&text=upload completed"
+
