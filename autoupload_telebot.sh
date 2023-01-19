@@ -21,7 +21,7 @@ else
     if [ "$dirnameStr" = "$downloadPath" ]; then
       basenameStr=`basename "$filePath"`
       su - -c "rclone move \"$filePath\" $rcloneDrive\"$basenameStr\""
-      TEXT2=$(echo $3 | sed 's|.*/||')
+      TEXT2=$basenameStr
       curl -s -o /dev/null "https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHATID&text=$TEXT2 Uploaded"
       rm -r -f "$filePath"
       exit 0
